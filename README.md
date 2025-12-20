@@ -41,7 +41,7 @@ After creation, Kleopatra shows your public and private key.
 
 **Export the keys**
 
-Export public key: .asc file. This is the key you put on the server to allow encryption.
+Export public key: .asc or .pub file. This is the key you put on the server to allow encryption.
 
 Keep private key secure. This stays on your **Windows PC** for decrypting backups.
 
@@ -56,6 +56,8 @@ sudo apt update
 sudo apt install gnupg -y
 # On your Linux server, import the public key so the backup script can encrypt files to it:
 gpg --import /path/to/publickey.asc
+# or:
+gpg --import /path/to/publickey.pub
 # Verify the key:
 gpg --list-keys
 ```
