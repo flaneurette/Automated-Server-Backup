@@ -20,7 +20,15 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 ## Server installation
 
-1. Navigate to `/usr/local/bin`:
+1. Install gpg.
+
+```
+sudo apt update
+sudo apt install gnupg -y
+gpg --import /path/to/public.key
+```
+
+2. Navigate to `/usr/local/bin`:
 
 ```bash
 cd /usr/local/bin
