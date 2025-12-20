@@ -13,6 +13,11 @@ Automatically create **server backups on Linux**, encrypted with your **GPG key*
 - GPG for Windows ([https://www.gnupg.org/](https://www.gnupg.org/))  
 - Optional: Kleopatra 
 
+All executables can be found here:
+
+https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+## Server installation
 
 1. Navigate to `/usr/local/bin`:
 
