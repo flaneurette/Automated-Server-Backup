@@ -13,7 +13,7 @@ Automatically create **server backups on Linux**, encrypted with your **GPG key*
 - GPG for Windows ([https://www.gpg4win.org/](https://gpg4win.org)) 
 - Kleopatra (included in gpg4win)
 
-In possible, always download the required executables from the official channel. I added the executables inside the backup folder as a private backup, including the signatures.
+If possible, always download the required executables from the official channel. I added the executables inside the backup folder as a private backup, including the signatures.
 All official executables can be found here:
 
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
@@ -45,7 +45,7 @@ Export public key: .asc file. This is the key you put on the server to allow enc
 
 Keep private key secure. This stays on your **Windows PC** for decrypting backups.
 
-## Server installation
+## Linux Server installation
 
 1. Install gpg.
 
@@ -79,18 +79,19 @@ Add the following line to run backups every Sunday at 2:00 AM and log the output
 
 Save.
 
-## On Windows
+## On Windows, final step
 
 1. Create a PuTTY private key using puttygen if you don’t have one yet.
-2. Create a folder on your Desktop called /Backup/ (or somewhere else,  edit all files to set correct).
+2. Create a folder on your Desktop called `Backup` (or somewhere else,  edit all files to set it correct).
 3. Then move these files into the folder:
    
 ```  
 - pscp.exe
 - Run-Backup.vbs
 - Server-Backup.bat
-- Your Putty private key, i.e. privatekey.ppk
+- Your Putty private server key, i.e. privatekey.ppk (not your private GPG key!)
 ```
+
 ## Run it manually, or schedule.
 
 Manually:
