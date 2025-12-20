@@ -1,6 +1,6 @@
 # Automated Server Backup
 
-Automatically create **server backups on Linux**, encrypted with your **GPG key**, and *automatically* download the encrypted backups on Windows on a weekly basis.  
+Automatically create **server backups on Linux**, encrypted with your **GPG key**, and automatically download the encrypted backups on Windows on a weekly basis.  
 
 ---
 
