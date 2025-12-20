@@ -11,12 +11,39 @@ Automatically create **server backups on Linux**, encrypted with your **GPG key*
 - `pscp.exe`  
 - A strong **GPG key** to encrypt the archive  
 - GPG for Windows ([https://www.gpg4win.org/](https://gpg4win.org)) 
-- Optional: Kleopatra 
+- Kleopatra (included in gpg4win)
 
 In possible, always download the required executables from the official channel. I added the executables inside the backup folder as a private backup, including the signatures.
 All official executables can be found here:
 
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+# On windows
+
+Using Kleopatra to create a keypair for encryption (GUI)
+
+*Remember: this is not your private key for SSH access!*
+
+```
+Open Kleopatra (installed with Gpg4win).
+Go to File → New Certificate.
+Select Create a personal OpenPGP key pair and click Next.
+Enter your name and email (this identifies the key).
+Optional: add a comment (e.g., “Server Backup Key”).
+Choose key settings:
+Key type: RSA and RSA (default)
+Key size: 4096 bits (recommended)
+Expiration: your choice (e.g., never expire or 1 year)
+Click Create Key.
+Enter a strong passphrase.
+After creation, Kleopatra shows your public and private key.
+```
+
+**Export the keys**
+
+Export public key: .asc file. This is the key you put on the server to allow encryption.
+
+Keep private key secure. This stays on your **Windows PC** for decrypting backups.
 
 ## Server installation
 
@@ -25,7 +52,10 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 ```
 sudo apt update
 sudo apt install gnupg -y
-gpg --import /path/to/public.key
+# On your Linux server, import the public key so the backup script can encrypt files to it:
+gpg --import /path/to/publickey.asc
+# Verify the key:
+gpg --list-keys
 ```
 
 2. Navigate to `/usr/local/bin`:
