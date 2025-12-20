@@ -4,7 +4,7 @@ Automatically create **server backups on Linux**, encrypted with your **GPG key*
 
 ---
 
-## Requirements
+## All Requirements
 
 - `putty.exe`  
 - `puttygen.exe`  
