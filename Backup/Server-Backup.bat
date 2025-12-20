@@ -11,6 +11,6 @@ REM Create local folder if it doesn't exist
 if not exist "%LOCAL_FOLDER%" mkdir "%LOCAL_FOLDER%"
 
 REM Run pscp
-"%USERPROFILE%\Desktop\Backup\pscp.exe" -scp -i "%PPK_PATH%" "%SERVER_USER%@%SERVER_HOST%:%REMOTE_FILE%" "%LOCAL_FOLDER%"
+"%USERPROFILE%\Desktop\Backup\pscp.exe" -i "%PPK_PATH%" "%SERVER_USER%@%SERVER_HOST%:%REMOTE_FILE%" "%LOCAL_FOLDER%"
 
 pause
