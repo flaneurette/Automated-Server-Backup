@@ -76,10 +76,11 @@ RECIPIENT="Your Name <email@emaildomain.com>"   # Must match your public key
 ```bash
 cd /usr/local/bin
 sudo nano backup.sh
-sudo chmod +x /usr/local/bin/backup.sh
 ```
 Paste editted backup.sh script.
-
+```
+sudo chmod +x /usr/local/bin/backup.sh
+```
 ## Cron
 ```bash
 sudo crontab -e
