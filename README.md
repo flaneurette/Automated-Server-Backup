@@ -45,6 +45,8 @@ Export public key: .asc file. This is the key you put on the server to allow enc
 
 Keep private key secure. This stays on your **Windows PC** for decrypting backups.
 
+Then edit: ``Backup/Server-Backup.bat`` and set all required information.
+
 ## Linux Server installation
 
 1. Install gpg.
