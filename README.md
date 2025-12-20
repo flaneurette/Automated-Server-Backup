@@ -10,10 +10,11 @@ Automatically create **server backups on Linux**, encrypted with your **GPG key*
 - `puttygen.exe`  
 - `pscp.exe`  
 - A strong **GPG key** to encrypt the archive  
-- GPG for Windows ([https://www.gnupg.org/](https://www.gnupg.org/))  
+- GPG for Windows ([https://www.gpg4win.org/](https://gpg4win.org)) 
 - Optional: Kleopatra 
 
-All executables can be found here:
+In possible, always download the required executables from the official channel. I added the executables inside the backup folder as a private backup, including the signatures.
+All official executables can be found here:
 
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
