@@ -94,10 +94,12 @@ Save.
 - Your Putty private server key, i.e. privatekey.ppk (not your private GPG key!) this is required for pscp.exe to login to your server securely through ssh.
 ```
 
+Then edit: ``Backup/Server-Backup.bat`` and set all required information.
+
 ## Run it manually, or schedule.
 
 Manually:
-To run it, click Run-Backup.vbs
+To run it, click `Run-Backup.vbs`
 
 Scheduled (Recommended)
 Use Windows Task Scheduler:
