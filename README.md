@@ -60,14 +60,25 @@ gpg --import /path/to/publickey.asc
 gpg --list-keys
 ```
 
-2. Navigate to `/usr/local/bin`:
+2. Edit: backup.sh
+   
+```
+Edit your key information: Name and E-mail address (required) and other configurations:
+# -------- CONFIG --------
+BACKUP_FILE="/secret/path/backup.tar.gz"
+ENCRYPTED_FILE="/secret/path/backup.tar.gz.gpg"
+LOG_FILE="/secret/path/backup.log"
+RECIPIENT="Your Name <email@emaildomain.com>"   # Must match your public key
+```
+
+3. Navigate to `/usr/local/bin`:
 
 ```bash
 cd /usr/local/bin
 sudo nano backup.sh
 sudo chmod +x /usr/local/bin/backup.sh
 ```
-Paste .sh script.
+Paste editted backup.sh script.
 
 ## Cron
 ```bash
