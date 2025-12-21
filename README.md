@@ -18,6 +18,8 @@ All official executables can be found here:
 
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
+> For brevity, we assume to run this from your Desktop to try it out. For better security, run everything from a secure USB stick, which you can attach and detach on a daily basis.
+
 # On windows
 
 Using Kleopatra to create a keypair for encryption (GUI)
