@@ -2,4 +2,4 @@
 
 - If you don't have a SSH server key, used for SSH and SCP copy access, you can create one with puttygen.exe
 
-- It is recommeneded to have a SSH server key, and not SSH password access.
+- It is recommeneded to have a SSH server key, and not SSH password access. (disable that on your server)
