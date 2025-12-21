@@ -1,1 +1,5 @@
-Put your PuTTY server SSH key inside the /Backup/ folder. NOT you GPG private key! that one you MUST keep a secret.
+- Put your PuTTY server SSH key inside the /Backup/ folder. NOT your GPG private key! that one you MUST keep a secret.
+
+- If you don't have a SSH server key, used for SSH and SCP copy access, you can create one with puttygen.exe
+
+- It is recommeneded to have a SSH server key, and not SSH password access.
