@@ -6,10 +6,10 @@ Automatically create **server backups on Linux**, encrypted with your **GPG key*
 
 ## All Requirements
 
-- `putty.exe`  
-- `puttygen.exe`  
-- `pscp.exe`  
-- A strong **GPG key** to encrypt the archive  
+- `putty.exe` (optional)
+- `puttygen.exe` (optional)
+- `pscp.exe` (required)
+- A strong **GPG key** to encrypt the archive:
 - GPG for Windows ([https://www.gpg4win.org/](https://gpg4win.org)) 
 - Kleopatra (included in gpg4win)
 
