@@ -43,7 +43,7 @@ After creation, Kleopatra shows your public and private key.
 
 Export public key: .asc or .pub file. This is the key you put on the server to allow encryption.
 
-Keep private key secure. This stays on your **Windows PC** or USB stick, for decrypting backups. However, exporting the pirvate key is usually not needed and can increase risks. If possible, store it on a USB drive and keep it offline for emergency only. If possible store it in a secure vault.
+Keep private key secure. This stays on your **Windows PC** or USB stick, for decrypting backups. However, exporting the private key is usually not needed and can increase risks. If possible, store it on a USB drive and keep it offline for emergency only. If possible store it in a secure vault.
 
 Then edit: ``Backup/Server-Backup.bat`` and set all required information.
 
