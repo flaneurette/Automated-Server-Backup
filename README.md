@@ -72,7 +72,8 @@ Edit your key information: Name and E-mail address (required) and other configur
 BACKUP_FILE="/secret/path/backup.tar.gz"
 ENCRYPTED_FILE="/secret/path/backup.tar.gz.gpg"
 LOG_FILE="/secret/path/backup.log"
-RECIPIENT="Your Name <email@emaildomain.com>"   # Must match your public key
+RECIPIENT="Your Name <email@example.com>"   # GPG recipient, must match GPG key!
+ALERT_EMAIL="backups@example.com"          # Where alerts will be sent
 ```
 
 3. Navigate to `/usr/local/bin`:
