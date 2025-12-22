@@ -17,6 +17,7 @@ Automatically create **server backups on Linux**, encrypted with your **GPG key*
 - A strong **GPG key** to encrypt the archive:
 - GPG for Windows ([https://www.gpg4win.org/](https://gpg4win.org)) 
 - Kleopatra (included in gpg4win)
+- Linux commands: `tar, gpg, mail, df, du`
 
 If possible, always download the required executables from the official channel. I added the executables inside the backup folder as a private backup, including the signatures.
 All official executables can be found here:
@@ -57,10 +58,9 @@ Then edit: ``Backup/Server-Backup.bat`` and set all required information.
 ## Linux Server installation
 
 1. Install gpg.
-
 ```
 sudo apt update
-sudo apt install gnupg -y
+sudo apt install -y gnupg tar mailutils
 # On your Linux server, import the public key so the backup script can encrypt files to it:
 gpg --import /path/to/publickey.asc
 # or:
