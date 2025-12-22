@@ -70,9 +70,11 @@ gpg --list-keys
 ```
 
 2. Edit: backup.sh
-   
+
+These MUST be set. If you leave them empty, strange things can happen, and server files maybe **permanently deleted**.
+
 ```
-Edit your key information: Name and E-mail address (required) and other configurations. These MUST be set. If you leave them empty, strange things can happen, and server files maybe **permanently deleted**.
+Edit your key information: Name and E-mail address (required) and other configurations.
 # -------- CONFIG --------
 BACKUP_FILE="/secret/path/backup.tar.gz"
 ENCRYPTED_FILE="/secret/path/backup.tar.gz.gpg"
