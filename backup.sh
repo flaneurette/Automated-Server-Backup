@@ -18,6 +18,7 @@ echo "Starting backup at $(date)" >> "$LOG_FILE"
   --exclude=/mnt \
   --exclude=/media \
   --exclude=/lost+found \
+  --exclude="$ENCRYPTED_FILE" \
   --exclude="$BACKUP_FILE" \
   /
 
