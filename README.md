@@ -2,7 +2,7 @@
 
 Automatically create **server backups on Linux**, encrypted with your **GPG key**, and automatically download the encrypted backups on Windows on a weekly basis. 
 
-To prevent failures the script has several checks:
+The script has several checks:
 
 - checks available diskspace first
 - excludes backups, gpg files inside every new backup.
