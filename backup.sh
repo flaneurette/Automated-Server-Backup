@@ -4,7 +4,7 @@
 BACKUP_FILE="/secret/path/backup.tar.gz"
 ENCRYPTED_FILE="/secret/path/backup.tar.gz.gpg"
 LOG_FILE="/secret/path/backup.log"
-RECIPIENT="Alexandra <email@example.com>"   # GPG recipient, must match GPG key!
+RECIPIENT="Your Name <email@example.com>"   # GPG recipient, must match GPG key!
 ALERT_EMAIL="backups@example.com"          # Where alerts will be sent
 
 # -------- FUNCTION TO SEND ALERT --------
