@@ -28,6 +28,12 @@ EXCLUDES=(
   /mnt
   /media
   /lost+found
+  /bin
+  /sbin
+  /lib
+  /lib64
+  /usr/bin
+  /usr/sbin
   "$BACKUP_FILE"
   "$ENCRYPTED_FILE"
 )
