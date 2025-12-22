@@ -43,9 +43,25 @@ for i in "${EXCLUDES[@]}"; do
     TAR_EXCLUDES+=(--exclude="$i")
 done
 
+# -------- CALCULATE REQUIRED SPACE --------
+# Check required space
+REQUIRED_SPACE=$(du -xsc /etc /home /var/www /root /var/lib/mysql 2>/dev/null | grep total$ | awk '{print $1}')
+
+# Available space on /
+AVAILABLE_SPACE=$(df --output=avail /root | tail -1)
+
+# Add 10% buffer
+REQUIRED_SPACE=$((REQUIRED_SPACE + REQUIRED_SPACE/10))
+
+if [ "$AVAILABLE_SPACE" -lt "$REQUIRED_SPACE" ]; then
+    echo "Not enough disk space. Required: $REQUIRED_SPACE KB, Available: $AVAILABLE_SPACE KB."
+    send_alert "Backup Failed - Low Disk Space" "Required: $REQUIRED_SPACE KB, Available: $AVAILABLE_SPACE KB"
+    exit 1
+fi
+
 # -------- CREATE BACKUP --------
 echo "Creating backup..." >> "$LOG_FILE"
-if sudo tar -cvpzf "$BACKUP_FILE" "${TAR_EXCLUDES[@]}" / >> "$LOG_FILE" 2>&1; then
+if sudo tar -cvpzf "$BACKUP_FILE" --ignore-failed-read "${TAR_EXCLUDES[@]}" / >> "$LOG_FILE" 2>&1; then
     echo "Backup created successfully at $(date)" >> "$LOG_FILE"
 else
     ERROR_MSG="Backup creation failed at $(date). Check $LOG_FILE for details."
