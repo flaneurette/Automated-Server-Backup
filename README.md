@@ -11,7 +11,7 @@ The script has several checks:
   
 ---
 
-> For even more security, consider generating a secure 256 bits keyfile to encrypt backups:
+> For even more security (quantum decryption prevention), consider generating a secure 256 bits keyfile to encrypt backups:
 > 
 > https://github.com/flaneurette/Hardening-Encryption-on-Linux
 
